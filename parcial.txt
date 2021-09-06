@@ -1,0 +1,32 @@
+<canvas id="canvas">
+<script>
+function draw() {
+  var canvas = document.getElementById('canvas');
+  if (canvas.getContext) {
+    var ctx = canvas.getContext('2d');
+    ctx.save();
+
+    ctx.beginPath();
+    ctx.moveTo(180, 100);
+    ctx.lineTo(116, 50);
+    ctx.lineTo(116, 150);
+    ctx.fill();
+    
+    ctx.beginPath();
+    ctx.moveTo(50, 100);
+    ctx.lineTo(115, 50);
+    ctx.lineTo(115, 150);
+    ctx.fillStyle='#f60';
+    ctx.fill();
+    ctx.restore();
+    
+    ctx.translate(200, 80); 
+    ctx.rotate((Math.PI / 180) * 25);
+    ctx.translate(-200, -80); 
+    
+  }
+  
+}
+draw();
+
+</script>

@@ -1,0 +1,75 @@
+<canvas id="canvas">
+<script>
+function draw() 
+{
+  var canvas = document.getElementById('canvas');
+  if (canvas.getContext) 
+  {
+    var ctx = canvas.getContext('2d');
+    
+    ctx.beginPath();
+    ctx.moveTo(150, 69);
+    ctx.lineTo(216, 5);
+    ctx.lineTo(216, 105);
+    ctx.fillStyle='#0a0a0a';
+    ctx.fill();
+    
+    ctx.beginPath();
+    ctx.moveTo(0, 64);
+    ctx.lineTo(65, 0);
+    ctx.lineTo(65, 100);
+    ctx.fillStyle='#f60';
+    ctx.fill(); 
+    
+    ctx.beginPath();
+    ctx.moveTo(180, 115);
+    ctx.lineTo(116, 50);
+    ctx.lineTo(116, 150);
+    ctx.fillStyle='#0a0a0a';
+    ctx.fill();
+    
+    ctx.beginPath();
+    ctx.moveTo(50, 115);
+    ctx.lineTo(115, 50);
+    ctx.lineTo(115, 150);
+    ctx.fillStyle='#f60';
+    ctx.fill();
+    
+   ctx.save();
+    ctx.rotate((Math.PI / 180) * 5);
+    ctx.scale(2, 2);
+
+    ctx.beginPath();
+    ctx.moveTo(180, 115);
+    ctx.lineTo(116, 50);
+    ctx.lineTo(116, 150);
+    ctx.fillStyle='#0a0a0a';
+    ctx.fill();
+    
+    ctx.beginPath();
+    ctx.moveTo(50, 115);
+    ctx.lineTo(115, 50);
+    ctx.lineTo(115, 150);
+    ctx.fillStyle='#f60';
+    ctx.fill(); 
+    
+    ctx.restore();
+    
+    ctx.font = '30px serif';
+    ctx.fillStyle='#09f';
+    ctx.fillStyle='#0a0a0a';
+    ctx.fillText('Mateo', 0, 150);
+    
+    ctx.scale(2, 1);
+    ctx.font = '20px serif';
+    ctx.fillStyle='#f60';
+    ctx.fillText('Mateo', 35, 40);
+
+  }
+
+
+    
+}
+draw();
+
+</script>
